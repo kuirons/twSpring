@@ -1,19 +1,21 @@
 package config;
 
+import com.google.common.base.Preconditions;
+
 /**
  * @Author: kuirons
  * @Date: 18-1-18
  */
 public class Q_positonInforBean {
     private String planeId;
-    private int[] positon;
+    private int[] positions;
 
-    public int[] getPositon() {
-        return positon;
+    public int[] getPositions() {
+        return positions;
     }
 
-    public void setPositon(int[] positon) {
-        this.positon = positon;
+    public void setPositons(int[] positions) {
+        this.positions = positions;
     }
 
     public String getPlaneId() {
@@ -23,5 +25,11 @@ public class Q_positonInforBean {
 
     public void setPlaneId(String planeId) {
         this.planeId = planeId;
+    }
+
+    public void init(String planeID,int[] position){
+        planeId = planeID;
+        positions = position;
+
     }
 }
