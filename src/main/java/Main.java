@@ -1,5 +1,6 @@
 import config.PositonConfig;
 import logic.plane.PlaneManager;
+import util.FileUtil;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -12,7 +13,7 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
     Main main = new Main();
-    main.positonConfig.load(String.valueOf(Main.class.getResource("")).replace("file:", ""));
+    main.positonConfig.load(String.valueOf(Thread.currentThread().getContextClassLoader().getResource("plane1")).replace("tw.spring.plane-1.0-SNAPSHOT-jar-with-dependencies.jar!/plane1","").replace("jar:file:/",""));
     main.planeManager.create(main.positonConfig);
 
     BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
