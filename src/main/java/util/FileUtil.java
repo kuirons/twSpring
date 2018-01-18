@@ -17,6 +17,6 @@ public class FileUtil {
   }
 
   public static List<String> readFile(File file) throws IOException {
-      return FileUtils.readLines(file,"utf-8");
+    return FileUtils.readLines(file, "utf-8");
   }
 }
